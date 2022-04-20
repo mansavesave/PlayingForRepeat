@@ -16,9 +16,6 @@
 #include <QSettings>
 #include <QResizeEvent>
 
-namespace Ui {
-class MainWindow;
-}
 
 class MainWindow : public QMainWindow
 {
@@ -41,7 +38,6 @@ private:
     QString mFilePath;
 
 private:
-    Ui::MainWindow *ui;
 
     QString mSettingFilePath;
     QSettings *mQSettings;

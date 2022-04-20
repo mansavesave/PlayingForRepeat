@@ -1,17 +1,14 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
 
+#include <QCoreApplication>
 #include <QRegExpValidator>
 #include <QThread>
 #include <QTimer>
 
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    QMainWindow(parent)
 {
-    ui->setupUi(this);
-
     mVideoPlayState = QMediaPlayer::State::StoppedState;
     mVideoDuration = 0;
     mVideoCurrentPos = 0;
@@ -24,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+
 }
 
 void MainWindow::initLayout()
